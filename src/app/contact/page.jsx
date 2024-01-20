@@ -3,10 +3,15 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 
+export const metadata = {
+  title: "Lama Dev Contact Information",
+  description: "This is Contact Page",
+};
+
 const Contact = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.title}>Let's Keep in Touch</div>
+      <h1 className={styles.title}>Let's Keep in Touch</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
@@ -20,12 +25,12 @@ const Contact = () => {
           <input type="text" placeholder="name" className={styles.input} />
           <input type="text" placeholder="email" className={styles.input} />
           <textarea
+            className={styles.textArea}
             placeholder="message"
             cols="30"
             rows="10"
-            className={styles.textArea}
           ></textarea>
-          <Button url="#" text="Send"></Button>
+          <Button url="#" text="Send" />
         </form>
       </div>
     </div>
